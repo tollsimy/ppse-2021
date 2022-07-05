@@ -1,14 +1,23 @@
 # Abstract
-This is the repository for SALMO, the Solar Azimuth and eLevation Motorized lOcator. It is a PCB used for driving a tracking solar panel system, using GPS location and a MPPT algorithm to maximise the incident power.  
-The official name of the project is `PPS2021_SUN_TRK`
+This is the repository for SALMO, the Solar Azimuth and eLevation Motorized lOcator.<br>
+SALMO is a PCB used for driving a tracking PV solar panel system, using only GPS location (and of course one magnetometer and one accelerometer to read the feedback of the panel position).
 
 # About the project
-During the second semester of the 2021/2022 A.Y. of their bachelor degree in Electronics Engineering, a group of students known as _SALMO SOCIETY_, developed a custom board to solve real world problems. 
-<br>Nowadays, we are all aware about climate change and it's impact, so the _SALMO SOCIETY_ decided in partecipate to the renewable energy run, in particular exploiting the energy obtained by a solar panel to drive a load.
-<br>The aim of the board it's to move the solar panel using two step motors (along z-y axis) facilitating the MPP (Maximum Power Point) reaching and, as consequence, delivering the maximum power to the load.<br> Using a GPS module, the board knows exactly where it is located around the globe; afterwards the position of the sun is computed with a specific algorithm based on astronomical calculations. Then, the spatial position of the panel is derived by the accelerometer and compass modules; lastly, the motor is moved in order to follow the exact position of the sun (given its azimuth and elevation).
+During the second semester of the 2021/2022 A.Y. of their bachelor degree in Electronics Engineering, a group of students known as _SALMO SOCIETY_, developed a custom board to solve real world problems.<br>
+Nowadays, we are all aware about climate change and it's impact, so the _SALMO SOCIETY_ decided in partecipate to the renewable energy run, in particular exploiting the energy obtained by a solar panel to drive a load.<br>
+The aim of the board it's to move the solar panel using two step motors (along z-y axis) facilitating the MPPT (not implemented yet) and, as consequence, delivering the maximum power to the batteries.<br> 
+Using a GPS module, the board knows exactly where it is located around the globe; afterwards the position of the sun is computed with a specific algorithm based on astronomical calculations. Then, the spatial position of the panel is derived by the accelerometer and compass modules; lastly, the motor is moved in order to follow the exact position of the sun (given its azimuth and elevation).
 
 ![Salmo board](/media/salmo_board.png)
 
+# Project Features
+The project has a lot of features, designed for an easy and pleasant user exeperience, such as:
+- USB interface
+- OLED Display (need firmware implementation)
+- Buzzer and RGB led (need corrections) to indicate board status
+- Current and Voltage sensing (need firmware implementation)
+- Simple "Tracking Enable" and "Home" buttons
+- Extreme expandability through the expansion connector (4 GPIO, 2 ADC input, I2C lines, +3.3V)
 
 # Repo structure
 
